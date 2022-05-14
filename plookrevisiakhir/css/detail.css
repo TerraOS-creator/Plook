@@ -1,0 +1,100 @@
+html{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../gambar/2.jfif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.description-image{
+    margin-top: 5px;
+    text-align: center;
+}
+.description-title h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.content .description .description-ul{
+    color: white;
+    margin-top:10px;
+    margin-left: 15%;
+    margin-right:15%;
+    text-align: justify;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+.wrapper{
+    width:705px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.wrapper h1{
+    display: inline-block;
+    background-color: orange;
+    color:white;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 4px 20px;
+    float: left;
+    border-radius: 50px;
+}
+.wrapper .clear{
+    clear: both;
+}
+.wrapper .items{
+    display: block;
+    margin: 20px 0;
+}
+.wrapper .items .item{
+    background-color: grey;
+    float: left;
+    margin: 0 10px 10px 0;
+    width: 200px;
+    padding:10px;
+    max-width: 220px;
+    max-height: 180px;
+}
+.item img {
+    display: block;
+    max-width: 200px;
+    max-height: 80px;
+    margin: auto;
+}
+.wrapper h2 {
+    font-size: 12px;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    margin: 0 0 10px 0;
+    padding: 0 0 5px 0;
+}
+.wrapper button{
+    border: 1p solid #ef4478;
+    padding: 4px 14px;
+    background-color: #ef4478;
+    color: white;
+    text-transform:uppercase ;
+    flex: right;
+    margin: 5px 0;
+    font-weight: 400;
+    cursor: pointer;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 50px;
+}
+.wrapper .items .item button:focus{
+    outline: none !important;
+}
+span{
+    float:right;
+}
+p{
+    font-size:14px;
+    color: white;
+}
+.shopping-cart{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0 0;
+}

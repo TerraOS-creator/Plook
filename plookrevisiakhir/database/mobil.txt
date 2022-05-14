@@ -1,0 +1,15 @@
+ELF
+sudah
+belum
+650000
+1
+12
+Elf.png
+nama
+supir
+BBM
+harga
+waktu
+kapasitas
+image
+insert into transportation values('Avanza','sudah','belum','400000',1,5,'avanza.jpg'),('Hiace','sudah','belum','650000',1,14,'Hiace.jpg'),('Agya','sudah','belum','200000',1,3,'agya.jpg')

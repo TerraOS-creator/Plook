@@ -1,0 +1,57 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+}
+.footer{
+    grid-area: footer;
+}
+.slideshow-container{
+    grid-area: slideshow-container;
+}
+.slideshow-container2{
+    grid-area: slideshow-container2;
+}
+.dot1{
+    grid-area: dot1;
+}
+.dot2{
+    grid-area: dot2;
+}
+.title-slide1{
+    grid-area: title1;
+    justify-self: center;
+    font-size: 20px;
+    color: white;
+    margin-left: 200px;
+    margin-bottom: 0px;
+}
+.title-slide2{
+    grid-area: title2;
+    justify-self: center;
+    font-size: 20px;
+    color: white;
+    margin-left: 200px;
+    margin-bottom: 0px;
+}
+.title-slide3{
+    grid-area: title3;
+    justify-self: center;
+    font-size: 20px;
+    color: white;
+    margin-left: 200px;
+    margin-bottom: 0px;
+}
+
+  

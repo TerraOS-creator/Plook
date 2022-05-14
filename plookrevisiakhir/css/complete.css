@@ -1,0 +1,125 @@
+html{
+    background:linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05)), url(../gambar/plain2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: black;
+    min-width: 599px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color:  black;
+
+}
+a.aLink:hover{
+    text-decoration: underline;
+}
+#main{
+    width: 100%;
+    position: relative;
+    z-index:100 ;
+}
+.wrap{
+    width: 599px;
+    margin: auto;
+}
+#header{
+    padding: 70px 0;
+}
+#header h1{
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    width: 280px;
+    margin:auto;
+}
+#header h1::before{
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+#header h1::after{
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+}
+#contents{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+color: black;
+padding-bottom: 35px;
+font-size: 22px;
+line-height: 30px;
+font-weight: normal;
+margin-top: -13%;
+}
+
+#contents h2{
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 80px;
+    font-weight: 500;
+}
+#contents .loader{
+    padding: 20px 0;
+    margin-top: -57px;
+}
+#contents .loader .load{
+    background-color: #313031;
+}
+#contents .loader .load .percentage{
+    background-color: white;
+    height:10px;
+}
+#contents .loader .info{
+    display: flex;
+    font-size: 18px;
+}
+#contents .loader .info span{
+    flex: 1;
+}
+#contents .loader .info span:first-child{
+    text-align: left;
+}
+#contents .loader .info span:last-child{
+    text-align: right;
+}
+#footer{
+    text-align: center;
+    padding-bottom: 80px;
+}
+#footer .social-links{
+    margin-top: 35%;
+    display: flex;
+    justify-content: center;
+}
+#footer .social-links a{
+font-size: 14px;
+ height: 20px;
+  width: 25px;
+  margin:20px 5px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: 0.3s;
+}
+#footer .social-links a i:hover{
+    background:black;
+    color:white;
+}

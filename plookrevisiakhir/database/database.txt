@@ -1,0 +1,20 @@
+CREATE TABLE users(
+id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+username varchar(50) NOT NULL,
+password varchar(70) NOT NULL,
+email varchar(50) NOT NULL,
+phone varchar(14) NOT NULL,
+type varchar(20) NOT NULL,
+date DATE,
+image varchar(100),
+disp_name varchar(20)
+)
+CREATE TABLE history(
+user_history JSON,
+id INT,
+FOREIGN KEY fk_id(id) REFERENCES users(id)
+)
+
+insert into promo values('1',10,'GRD10PLK2020',1500000,100000,'flight','[{"maskapai":"garuda","destination":"all destination","discount":10,"code":"GRD10PLK2020","minimum":1500000,"maximum":"100000","details":[{"1":"valid for mininum purchase Rp.2000000 on flight category"},{"2":"valid for all destination"}]}]'), insert into promo values('1',15,'GRD15PLK2020',2000000,200000,'flight','[{"maskapai":"garuda","destination":"bali","discount":15,"code":"GRD15PLK2020","minimum":2000000,"maximum":"200000","details":[{"1":"valid for mininum purchase Rp.1500000 on flight category "},{"2":"only flight from and to bali"}]}]')
+
+('2',15,'HRS15PLK2020',2,300000,'hotel','[{"hotel":"Harris","location":"bali","discount":15,"code":"HRS15PLK2020","minimum":"2 days","maximum":"300000","details":[{"1":"valid for mininum of 2 days fee in harris bali"},{"2":"only valid in harris bali"}]}]')

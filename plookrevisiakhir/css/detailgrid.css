@@ -1,0 +1,46 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header"
+    "content content"
+    "footer footer"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-areas:
+    "." 
+    "description-title"
+    "description-image"
+    "description-ul"
+    "wrapper"
+    ;
+}
+.footer{
+    grid-area: footer;
+}
+.description-title{
+    grid-area: description-title;
+}
+.description-image{
+    grid-area: description-image;
+}
+.description-ul{
+    grid-area: description-ul;
+}
+.wrapper{
+    grid-area: wrapper;
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}

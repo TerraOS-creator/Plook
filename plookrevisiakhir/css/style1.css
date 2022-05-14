@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+
+.slider-box{
+    height: 100%;
+    width:100%;
+    border:1px solid rgba(187,187,187,1.00);
+}
+    
+            .slider-box:hover{
+                box-shadow: 2px 2px 12px rgba(47,47,47,0,40);
+                transform: scale(1.02);
+                transition: all ease 0.3s;
+            }
+                    
+            body{
+                background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../gambar/2.jfif) no-repeat center center fixed; 
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
+            }

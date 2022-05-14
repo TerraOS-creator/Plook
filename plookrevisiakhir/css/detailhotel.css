@@ -1,0 +1,175 @@
+
+  @media screen and (max-width:1085px){
+    #contacts {
+      display: block;
+      padding: 8px 16px;
+      line-height: 2em;
+    }
+  
+    #contacts a {
+      padding: 0 16px 0 0;
+    }
+  
+    #contacts a:hover {
+      background: none;
+      text-shadow: 0 0 16px #fff;
+     
+    }
+  }
+  
+  #contacts {
+    display: flex;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  #contacts a {
+    width: 100%;
+    padding: 12px 8px;
+    text-align: center;
+    display: inline;
+    text-decoration: none;
+  }
+  
+  #contacts a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  .content{
+    margin-top: 20px;
+    margin-left: 6%;
+  }
+  .content .above{
+      display: flex;
+
+  }
+  .info{
+    width: 90%;
+    margin-left: 1.65%;
+      display: block;
+      border: #0009;
+  }
+  .info .image-title h2{
+      margin-left: -2%;
+      color: white;
+      font-size: 26px;
+      text-transform: capitalize;
+  }
+  .info .locate{
+    color: white;
+    margin-left: -2%;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.image-container{
+    width: 90%;
+    height: 25%;
+}
+.image-container img{
+    height: 100%;
+    width: 100%;
+}
+
+.content .middle{
+   width: 50%;
+  background-color: transparent;
+    margin-top: 2%;
+}
+.type input[type=number]{
+  color: black;
+  margin-top: 5%;
+  border-radius: 50px;
+  width: 150px;
+  height: 30px;
+  padding: 10px;
+}
+.content .one{
+margin-left: 5%;
+}
+.content .two{
+  margin-right: 10%;
+}
+.content .middle .description{
+    color: white;
+}
+.content .middle .name{
+    color: white;
+    margin-bottom: 5%;
+    font-size: 35px;
+    margin-left: 2.5%;
+    text-transform: capitalize;
+}
+.content .middle .type{
+    margin-left: 4.5%;
+    font-size: 18px;
+    color: white;
+}
+.content .middle .type .fasilitas .satu,.content .middle .type .fasilitas .dua{
+    margin-left: 1%;
+}
+.content .lower{
+    margin-top: 0.5%;
+}
+.content .lower .wrapper{
+    background-color: #0009;
+    height: 40%;
+    width: 60%;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+}
+.payment .name{
+    width: 50%;
+    margin-left: 2.5%;
+    margin-top: 1.5%;
+    color:white;
+}
+
+.payment{
+    width: 90%;
+    background-color: transparent;
+    border-radius: 10px;
+    border-style: none;
+    height: 50%;
+}
+.payment input[type=submit]{
+    background-color: red;
+    color: white;
+    margin-top: 2%;
+    margin-left: 95%;
+    border-radius: 10px;
+    border-style: none;
+    height: 50px;
+    width: 175px;
+}
+
+@media screen and (max-width:1085px){
+  .payment input[type=submit]{
+    background-color: red;
+    color: white;
+    margin-top: 2%;
+    margin-left: 38%;
+    border-radius: 10px;
+    border-style: none;
+    height: 50px;
+    width: 175px;
+}
+}
+@media screen and (max-width:768px){
+  .payment input[type=submit]{
+    background-color: red;
+    color: white;
+    margin-top: 2%;
+    margin-left: 32.3%;
+    border-radius: 10px;
+    border-style: none;
+    height: 50px;
+    width: 175px;
+}
+}
+
+
+
+
+

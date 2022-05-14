@@ -1,0 +1,122 @@
+.content .search-box{
+    margin-left: 300px;
+    height: 75px;
+    width: 60%;
+    display: flex;
+    background-color: green;
+    justify-content: center;
+    border-radius: 25px;
+}
+.content{
+    justify-content: center;
+    
+}
+
+.hidden-wrapper.active{
+    margin-top: 10px;
+    display: flex;
+    background-color: rgb(65, 65, 179);
+    width: 90%;
+    height: 80%;
+    margin-left: 75px;
+    border-radius: 25px;
+    z-index: 9998;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 200vh auto;
+    grid-template-areas: 
+    "header"
+    "field"
+    "footer"
+    ;
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: field;
+    margin-top: 50px;
+}
+.content .search-box .active{
+    background-color: black;
+    color: white;
+    
+}
+.content .search1,.content .search2,.content .search3,.content .search4{
+    
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 7px;
+    box-shadow: none;
+    border: none;
+    justify-self: center;
+    display: flex;
+    
+    justify-content: center;
+    width: 25%;
+    height: 40%;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: 17px;
+    margin-right: 17px;
+    }
+
+.footer{
+    grid-area: footer;
+}
+
+@media screen and (max-width:800px){
+    .content .search-box .search{
+        margin-top: 7px;
+        box-shadow: none;
+        border: none;
+        justify-content: center;
+        background-color: hotpink;
+        justify-content: center;
+        width: 100%;
+        height: 40%;
+        border-radius: 30px;
+        text-decoration: none;
+        margin-left: 17px;
+        margin-right: 17px;
+        }
+        .content .search-box{
+            height: 75px;
+            width: 100%;
+            display: flex;
+            background-color: green;
+            justify-content: center;
+            border-radius: 25px;
+        }
+  }
+  .hidden_search .hid_search1,.hidden_search .hid_search2,.hidden_search .hid_search3,.hidden_search .hid_search4{
+      display: none;
+  }
+  .hidden-wrapper .hidden-box1 .active,.hidden-wrapper .hidden-box2 .active,.hidden-wrapper .hidden-box3 .active{
+
+    z-index: 9999;
+  }
+.content ul{
+    background-color:#eee;
+    cursor:pointer;
+    margin-left: 450px;
+    width: 600px;
+}
+
+.content li{
+    list-style: none;
+    padding:12px;
+    width: 600px;
+    max-height: 50vh;
+}
+.content li:hover{
+    background-color: black;
+    color: white;
+}
+.form-control{
+    margin-left: 450px;
+    width: 600px;
+    height: 5vh;
+}

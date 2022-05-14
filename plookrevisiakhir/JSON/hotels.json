@@ -1,0 +1,28 @@
+[
+    {"nama":"The Sultan Hotel",
+    "description1":[{"type":"Deluxe room","bed":"double bed","bedQuantity":"1","price":1369114,"maximum":"2","luas":"40m","fasilitas":[{"1":"sarapan gratis","2":"wifi gratis"}]}],
+    "description2":[{"type":"Junior Suites room","bed":"double bed","bedQuantity":"1","price":2694064,"maximum":"2","luas":"64m","fasilitas":[{"1":"sarapan gratis","2":"wifi gratis"}]}]
+    },
+
+    {"nama":"The Pullman Hotel",
+        "description1":[{"type":"Single deluxe room","bed":"single queen bed","bedQuantity":"1","price":1989046,"maximum":"1","luas":"32m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}],
+        "description2":[{"type":"Double Deluxe room","bed":"single bed","bedQuantity":"2","price":1989046,"maximum":"2","luas":"32m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}]
+        },
+
+        {"nama":"Shangri-La Hotel",
+            "description1":[{"type":"Single deluxe room","bed":"single king bed","bedQuantity":"1","price":1782714,"maximum":"1","luas":"43m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}],
+            "description2":[{"type":"Double Deluxe room","bed":"twin bed","bedQuantity":"2","price":1782714,"maximum":"2","luas":"43m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}]
+            },
+            {"nama":"Le Meridien Hotel",
+                "description1":[{"type":"Single deluxe room","bed":"single king bed","bedQuantity":"1","price":2238501,"maximum":"1","luas":"34m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}],
+                "description2":[{"type":"Premier room","bed":"twin bed","bedQuantity":"2","price":1782714,"maximum":"2","luas":"34m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}]
+                },
+                {"nama":"Grand Mercure Hotel",
+                    "description1":[{"type":"Superior room","bed":"single queen bed","bedQuantity":"1","price":1340680,"maximum":"1","luas":"32m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}],
+                    "description2":[{"type":"Premier room","bed":"king bed","bedQuantity":"2","price":1540680,"maximum":"2","luas":"34m","fasilitas":[{"1":"tanpa sarapan","2":"tanpa wifi"}]}]
+                    },
+                    {"nama":"Harris Vertu Hotel",
+                        "description1":[{"type":"V room","bed":"double bed","bedQuantity":"1","price":1048000,"maximum":"1","luas":"28m","fasilitas":[{"1":"tanpa sarapan","2":"wifi gratis"}]}],
+                        "description2":[{"type":"Vertu Suite room","bed":"double bed","bedQuantity":"2","price":2248000,"maximum":"2","luas":"34m","fasilitas":[{"1":"tanpa sarapan","2":"wifi gratis"}]}]
+                        }
+]

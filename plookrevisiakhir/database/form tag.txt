@@ -1,0 +1,43 @@
+flight round
+<form action="payment.php" method="POST">
+            <input type="hidden" name="payment_type" value="flightroundtrip">
+            <input type="hidden" name="classtype" value="'.$class.'">
+            <input type="hidden" name="price" value="'.$hasil.'">
+            <input type="hidden" name="date" value="'.$departdate.'">
+            <input type="hidden" name="classtype2" value="'.$class.'">
+            <input type="hidden" name="price2" value="'.$hasil2.'">
+            <input type="hidden" name="date2" value="'.$returndate.'">
+            <input type="hidden" name="type" value="roundtrip">
+            <button type="submit" class="btn btn-primary">Add to Chart</button>
+            </form>
+         
+one way
+<input type="hidden" name="payment_type" value="flightoneway">
+            <input type="hidden" name="from" value="'.$temp1[$i][0].'">
+            <input type="hidden" name="to" value="'.$temp2[$a][0].'">
+            <input type="hidden" name="classtype" value="'.$class.'">
+            <input type="hidden" name="price" value="'.$hasil.'">
+            <input type="hidden" name="date" value="'.$departdate.'">
+            <input type="hidden" name="type" value="onewaynonstop">
+            <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
+
+hotel
+<input type="hidden" name="payment_type" value="hotels">
+<input type="hidden" name="hotel_name" value="<?php echo $array_name[0]?>">
+<input type="number" name="number2">
+<input type="number" name="number1"> 
+<input type="hidden" name="image" value="<?php echo $array_gambar[0];?>">
+<input type="hidden" name="type1" value="<?php echo $desc1["type"];?>">
+<input type="hidden" name="price1" value="<?php echo $desc1["price"];?>">
+<input type="hidden" name="type2" value="<?php echo $desc2["type"];?>">
+<input type="hidden" name="price2" value="<?php echo $desc2["price"];?>">
+
+transportation
+<input type="hidden" name="payment_type" value="transportation">
+        <input type="hidden" name="location" value="<?php echo $_SESSION['search'];?>">
+       <input type="hidden" name="image" value="<?php echo $array_gambar[$i];?>">
+        <input type="hidden" name="bbm" value="<?php echo $array_bbm[$i];?>">
+       <input type="hidden" name="supir" value="<?php echo $array_supir[$i]];?>">
+        <input type="hidden" name="price" value="<?php echo $array_harga[$i];?>">
+        <a class=gonow><input type="submit" value="Book now"></a>

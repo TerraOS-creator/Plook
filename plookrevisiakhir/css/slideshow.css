@@ -1,0 +1,121 @@
+
+
+#contacts {
+  display: flex;
+  width: 100%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+#contacts a {
+  width: 100%;
+  padding: 12px 8px;
+  text-align: center;
+  display: inline;
+  text-decoration: none;
+}
+
+#contacts a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.content{
+  margin-top: 20px;
+
+}
+.photobar-title{
+  text-align: center;
+}
+.photobar-title h2{
+  text-align: center;
+
+  margin-bottom: 4%;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(94, 94, 212);
+
+}
+.photobar{
+  z-index: 1;
+  display: flex;
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 2.5%;
+  justify-content:space-evenly;
+}
+
+.photobar a img{
+  z-index: 1;
+  display: flex;
+  width: 260px;
+  height:150px;
+  background: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.2));
+}
+
+.photobar a .text{
+  z-index: 1;
+  width: 80%;
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: -50px;
+  text-decoration:none;
+}
+
+.photobar a:hover{
+  transform: scale(1.1);
+}
+
+@media screen and (max-width:1085px){
+  .content2 .photobar-title h2{
+  margin-left: 150px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+
+  }
+
+  .photobar a{
+    text-align: center;
+  }
+  .photobar a img{
+    margin-left: 7.5%;
+    z-index: 1;
+    display: flex;
+    width: 70%;
+    margin-bottom: 5%;
+  }
+  .photobar a .text{
+    z-index: 1;
+    width: 60%;
+    background-color: #0009;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: -12%;
+  }
+  .photobar a:hover{
+    transform: scale(1.2);
+  }
+  .photobar{
+    display: block;
+    z-index: 1;
+    margin-left: 75px;
+    text-align: center;
+    width: 90%;
+  }
+  #contacts {
+    display: block;
+    padding: 8px 16px;
+    line-height: 2em;
+  }
+
+  #contacts a {
+    padding: 0 16px 0 0;
+  }
+
+  #contacts a:hover {
+    background: none;
+    text-shadow: 0 0 16px #fff;
+  }
+}
