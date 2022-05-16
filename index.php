@@ -59,6 +59,9 @@ $temp=json_encode($array_provinces);
   margin-left:0.5%;
   margin-right:0.5%;
 }
+.footer{
+  margin-top: 10%;
+}
 
     </style>
   </head>
@@ -119,16 +122,16 @@ $temp=json_encode($array_provinces);
     <a href="search_all.php?search=<?php echo"Kalimantan"?>"><img src="gambar/kalimantanutara.jpg"><div class="text">Kalimantan</div></a>
     </div>
     <div class="photobar">
-    <a href="search_all.php?search=<?php echo"Bandung"?>"><img src="gambar/banten.jpg"><div class="text">Banten</div></a>
-    <a href="search_all.php?search=<?php echo"Surabaya"?>"><img src="gambar/NTB.jpg"><div class="text">NTB</div></a>
-    <a href="search_all.php?search=<?php echo"Medan"?>"><img src="gambar/sulawesi.jpg"><div class="text">Sulawesi</div></a>
+    <a href="search_all.php?search=<?php echo"Banten"?>"><img src="gambar/banten.jpg"><div class="text">Banten</div></a>
+    <a href="search_all.php?search=<?php echo"Nusa Tenggara Barat"?>"><img src="gambar/NTB.jpg"><div class="text">Nusa Tenggara Barat</div></a>
+    <a href="search_all.php?search=<?php echo"Medan"?>"><img src="gambar/sumaterautara.jpg"><div class="text">Medan</div></a>
     <a href="search_all.php?search=<?php echo"Jawa Barat"?>"><img src="gambar/jawabarat.jpg"><div class="text">Jawa Barat</div></a>
     </div>
   </div>
   <div class="footer">
         <div class="inner-footer">
             <div class="footer-items">
-                <h1>2020 PLOOK. All Rights Reserved</h1>
+                <h1>2022 PLOOK. All Rights Reserved</h1>
                 
             </div>
 
@@ -178,7 +181,7 @@ $temp=json_encode($array_provinces);
             </div>
 
         <div class="footer-bottom">
-        Copyright &copy; PLOOK 2020. ALL rights reserved.
+        Copyright &copy; PLOOK 2022. ALL rights reserved.
         </div>
     </div>
 

@@ -83,6 +83,7 @@ if($rowcount == 0 || $rowcount2==0){
     echo "<div class='alert alert-info'><strong>Search Result: </strong>".$totalrow." result</div>";
 }
 else{
+    echo "<h2>All flights list</h2>";
 echo "<div class='alert alert-info'><strong>Search Result: </strong>".$totalrow." results</div>";
 
 echo "<table class='table table-bordered table-striped table-hover'>
@@ -177,7 +178,7 @@ echo " </tbody></table>";
 <div class="footer">
         <div class="inner-footer">
             <div class="footer-items">
-                <h1>2020 PLOOK. All Rights Reserved</h1>
+                <h1>2022 PLOOK. All Rights Reserved</h1>
                 
             </div>
 
@@ -227,7 +228,7 @@ echo " </tbody></table>";
             </div>
 
         <div class="footer-bottom">
-        Copyright &copy; PLOOK 2020. ALL rights reserved.
+        Copyright &copy; PLOOK 2022. ALL rights reserved.
         </div>
     </div>
 </body>

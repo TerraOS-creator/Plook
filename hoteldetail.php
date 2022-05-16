@@ -23,21 +23,31 @@ while($row=mysqli_fetch_array($res)){
   }
 //ganti object ke array
 $array_desc=objectsIntoArray($array_desc);
-$count=count($array_name);
-$i=0;
-//pecah-pecah data JSON
-//data full
-while($i<$count){
-    $temp=isset($array_desc[$i]);
-    $temp2=$temp[0];
-    $desc1=$temp2["description1"];
-    $desc2=$temp2["description2"];
-    $desc1=$desc1[0];
-    $desc2=$desc2[0];
-    $fasilitas=$desc1["fasilitas"];
-    $fasilitas=$fasilitas[0];
-    $fasilitas2=$desc2["fasilitas"];
-    $fasilitas2=$fasilitas2[0];
+$count=count($array_name); 
+
+    $temp=$array_desc[0];
+    $nama=$temp["nama"];
+       $desc1=$temp["description1"];
+        $desc2=$temp["description2"];
+        $type1=$desc1["type"];
+        $type2=$desc2["type"];
+        $bed1=$desc1["bed"];
+        $bed2=$desc2["bed"];
+        $bedQ1=$desc1["bedQuantity"];
+        $bedQ2=$desc2["bedQuantity"];
+        $price1=$desc1["price"];
+        $price2=$desc2["price"];
+        $max1=$desc1["maximum"];
+        $max2=$desc2["maximum"];
+        $luas1=$desc1["luas"];
+        $luas2=$desc2["luas"];
+        $fasilitas1=$desc1["fasilitas"];
+        $fasilitas2=$desc2["fasilitas"];
+        $makan1=$fasilitas1["1"];
+        $makan2=$fasilitas2["1"];
+        $wifi1=$fasilitas1["2"];
+        $wifi2=$fasilitas2["2"];
+
     // print($array_name[$i]);
     // print($array_gambar[$i]);
     // echo"<br> temp<br>";
@@ -47,8 +57,8 @@ while($i<$count){
     // echo "<br> desc2 <br>";
     // print($desc2["type"]); print($desc2["bed"]); print($desc2["price"]); print($desc2["luas"]); print($fasilitas2["1"]);print($fasilitas2["2"]);
     // echo"<br><br>";
-    $i++;
-}
+  
+
 
 $_SESSION['type1']=$desc1["type"];
 
@@ -111,17 +121,17 @@ $_SESSION['type2']=$desc2["type"];
         <div class="image-container"><img src="gambar/<?php echo $array_gambar[0];?>"></div>
         
     <div class="middle one">
-        <div class="name"><?php echo $desc1["type"];?></div>
+        <div class="name"><?php echo $type1;?></div>
         <div class="type">
-            <div class="bed"><i class="fa fa-bed"></i><?php echo $desc1["bedQuantity"];echo $desc1["bed"]?></div>
-            <div class="quantity"><i class="fa fa-user"></i><?php echo" "; echo $desc1["maximum"];echo" "; echo"people(s)"?></div>
+            <div class="bed"><i class="fa fa-bed"></i><?php echo $bedQ1;echo $bed1?></div>
+            <div class="quantity"><i class="fa fa-user"></i><?php echo" "; echo $max1;echo" "; echo"people(s)"?></div>
             
-            <div class="price">Price: Rp.<?php echo number_format($desc1["price"]);?></div>
-            <div class="luas">Luas kamar:<?php echo" ";echo $desc1["luas"];?></div>
+            <div class="price">Price: Rp.<?php echo number_format($price1);?></div>
+            <div class="luas">Luas kamar:<?php echo" ";echo $luas1;?></div>
             <div class="fasilitas">
                 Fasilitas:
-                <div class="satu">- <?php echo $fasilitas["1"]?></div>
-                <div class="dua">- <?php echo $fasilitas["2"]?></div>
+                <div class="satu">- <?php echo $makan1?></div>
+                <div class="dua">- <?php echo $wifi1?></div>
             </div>
             <input type="number" name="number1" placeholder="Quantity">
         </div>
@@ -129,17 +139,17 @@ $_SESSION['type2']=$desc2["type"];
     </div>
    
     <div class="middle two">
-        <div class="name"><?php echo $desc2["type"];?></div>
+        <div class="name"><?php echo $type2;?></div>
         
         <div class="type">
-        <div class="bed"><i class="fa fa-bed"></i><?php echo $desc2["bedQuantity"];echo $desc2["bed"]?></div>
-            <div class="quantity"><i class="fa fa-user"></i><?php echo" "; echo $desc2["maximum"];echo" "; echo"people(s)"?></div>
-            <div class="price">Price: Rp.<?php echo number_format($desc2["price"]);?></div>
-            <div class="luas">Luas kamar:<?php echo" ";echo $desc2["luas"];?></div>
+        <div class="bed"><i class="fa fa-bed"></i><?php echo $bedQ2;echo $bed2?></div>
+            <div class="quantity"><i class="fa fa-user"></i><?php echo" "; echo $max2;echo" "; echo"people(s)"?></div>
+            <div class="price">Price: Rp.<?php echo number_format($price2);?></div>
+            <div class="luas">Luas kamar:<?php echo" ";echo $luas2;?></div>
             <div class="fasilitas">
                 Fasilitas:
-                <div class="satu">- <?php echo $fasilitas2["1"]?></div>
-                <div class="dua">- <?php echo $fasilitas2["2"]?></div>
+                <div class="satu">- <?php echo $makan2?></div>
+                <div class="dua">- <?php echo $wifi2?></div>
             </div>
             <input type="number" name="number2" placeholder="Quantity"> 
         </div>
@@ -168,7 +178,7 @@ $_SESSION['type2']=$desc2["type"];
 <div class="footer">
         <div class="inner-footer">
             <div class="footer-items">
-                <h1>2020 PLOOK. All Rights Reserved</h1>
+                <h1>2022 PLOOK. All Rights Reserved</h1>
                 
             </div>
 
@@ -217,7 +227,7 @@ $_SESSION['type2']=$desc2["type"];
             </div>
 
         <div class="footer-bottom">
-        Copyright &copy; PLOOK 2020. ALL rights reserved.
+        Copyright &copy; PLOOK 2022. ALL rights reserved.
         </div>
     </div>
 

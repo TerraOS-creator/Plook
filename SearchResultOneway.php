@@ -121,7 +121,7 @@ if($stop=="nonstop"){
         echo "<div class='alert alert-info'><strong>Search Result: </strong>".$totalrow." result</div>";
     }
     else{
-        echo "<h2>showing result ($from to $to)</h2>";
+        echo "<h2>Flight from $from to $to</h2>";
     echo "<div class='alert alert-info'><strong>Search Result: </strong>".$totalrow." result(s)</div>";
 
     echo "<table class='table table-bordered table-striped table-hover'>
@@ -389,7 +389,7 @@ if($stop=="nonstop"){
   <div class="footer">
         <div class="inner-footer">
             <div class="footer-items">
-                <h1>2020 PLOOK. All Rights Reserved</h1>
+                <h1>2022 PLOOK. All Rights Reserved</h1>
                
             </div>
 
@@ -439,7 +439,7 @@ if($stop=="nonstop"){
             </div>
 
         <div class="footer-bottom">
-        Copyright &copy; PLOOK 2020. ALL rights reserved.
+        Copyright &copy; PLOOK 2022. ALL rights reserved.
         </div>
     </div>
 

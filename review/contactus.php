@@ -112,7 +112,7 @@ if(isset($_POST["submit"]))
  <body>
  <nav>
 <div class="logo">
-<a href="index.php"><img title="" src="..\gambar\logo2.png" style="width:200px;height:80px;"/></a>
+<a href="../index.php"><img title="" src="..\gambar\logo2.png" style="width:200px;height:80px;"/></a>
 </div>
 <ul class="nav-links">
 <?php if(!isset($_SESSION['user'])){ ?>
@@ -201,7 +201,7 @@ if(isset($_POST["submit"]))
   <div class="footer">
         <div class="inner-footer">
             <div class="footer-items">
-                <h1>2020 PLOOK. All Rights Reserved</h1>
+                <h1>2022 PLOOK. All Rights Reserved</h1>
                 <p>
                 LOREM IPSUM dolor si amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magne aliqua.
                 </p>
@@ -253,7 +253,7 @@ if(isset($_POST["submit"]))
             </div>
 
         <div class="footer-bottom">
-        Copyright &copy; PLOOK 2020. ALL rights reserved.
+        Copyright &copy; PLOOK 2022. ALL rights reserved.
         </div>
     </div>
     
