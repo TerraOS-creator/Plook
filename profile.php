@@ -151,7 +151,8 @@ $res=$res->fetch_assoc();
       // $history=$stmt->get_result();
       $history=mysqli_query($connection,$query);
       $array=$history->fetch_assoc();
-      if(count($array)){
+      $con=count((array)$array);
+      if($con){
       $history=json_decode($array['user_history']);
       $count=count($history);
       $a=0;
