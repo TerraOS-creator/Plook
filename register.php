@@ -18,13 +18,16 @@ function clean_text($string)
 
 if(isset($_POST["submit"]))
 {
-$query='SELECT * FROM users where email=?';
-$email=clean_text($_POST['email']);
-$stmt=$connection->prepare($query);
-$stmt->bind_param("s",$email);
-$stmt->execute();
+    $query="SELECT * FROM users where email='$email'";
+    $res = mysqli_query($connection,$query);
+    
+// $query='SELECT * FROM users where email=?';
+// $email=clean_text($_POST['email']);
+// $stmt=$connection->prepare($query);
+// $stmt->bind_param("s",$email);
+// $stmt->execute();
 
-$res=$stmt->get_result();
+// $res=$stmt->get_result();
 $res=$res->fetch_assoc();
 if($res!=NULL){    
     $error .= '<p><label class="text-danger">email already exist</label></p>';
@@ -105,23 +108,25 @@ if($res!=NULL){
         $temp="";
         $date=date("Y-m-d");
         $hash=hash('sha256',$password);
-        $query="INSERT INTO users values(?,?,?,?,?,?,?,?)";
-        $stmt=$connection->prepare($query);
-        $stmt->bind_param("isssssss",$temp,$hash,$email,$phone,$type,$date,$temp,$name);
-        $stmt->execute();
-        $stmt->close();
+        $query="INSERT INTO users values('$temp','$hash','$email','$phone','$type','$date','$temp','$name')";
+        $res = mysqli_query($connection,$query);
+        // $query="INSERT INTO users values(?,?,?,?,?,?,?,?)";
+        // $stmt=$connection->prepare($query);
+        // $stmt->bind_param("isssssss",$temp,$hash,$email,$phone,$type,$date,$temp,$name);
+        // $stmt->execute();
+        // $stmt->close();
         $error = '';
         $name = '';
         $email = '';
         $password='';
         $conf_password='';
         $phone='';
-        header('Location:Controller/complete.php?complete='."Please wait while we completing ur request . . .");
+        header('Location:login.php');
  }
 }
 
 
-
+$connection->close();
 
 ?>
 <!DOCTYPE html>
