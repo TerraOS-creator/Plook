@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" href="https>//fonts.googleapis.com/css?family=Sarabun">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/background.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -51,15 +51,15 @@
         <div class="about-pages">
             <div>
             <h2>Inspiration</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eum beatae, vitae vero voluptas ipsum dolor totam hic ullam sed laborum officia dolorum. Similique adipisci, aperiam perferendis eius omnis hic?</p>
+            <p></p>
             </div>
             <div>
             <h2>Our Mission</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eum beatae, vitae vero voluptas ipsum dolor totam hic ullam sed laborum officia dolorum. Similique adipisci, aperiam perferendis eius omnis hic?</p>
+            <p></p>
             </div>
             <div>
             <h2>Our Promises</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eum beatae, vitae vero voluptas ipsum dolor totam hic ullam sed laborum officia dolorum. Similique adipisci, aperiam perferendis eius omnis hic?</p>
+            <p></p>
             </div>
         </div>
     </section>
