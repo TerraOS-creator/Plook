@@ -7,20 +7,31 @@ require_once('support/ObjectIntoArr.php');
 $id=$_GET['id'];//hotel
 $nama=$_SESSION['search'];//region or province
 
-$query="SELECT * FROM hotels where nama=?";
-$stmt=$connection->prepare($query);
-$stmt->bind_param("s",$id);
-$stmt->execute();
-$res=$stmt->get_result();
-$stmt->close();
+$query="SELECT * FROM hotels where nama='$id'";
+$result = mysqli_query($connection,$query);
+
+// $query="SELECT * FROM hotels where nama=?";
+// $stmt=$connection->prepare($query);
+// $stmt->bind_param("s",$id);
+// $stmt->execute();
+// $res=$stmt->get_result();
+// $stmt->close();
 $i=0;
 
-while($row=mysqli_fetch_array($res)){
-    $array_name[$i]=$row["nama"];
-    $array_desc[$i]=json_decode($row["description"]);
-    $array_gambar[$i]=$row["gambar"];
-    $i++;
-  }
+if(mysqli_num_rows($result) > 0) {
+    while($row=mysqli_fetch_array($result)){
+        $array_name[$i]=$row["nama"];
+        $array_desc[$i]=json_decode($row["description"]);
+        $array_gambar[$i]=$row["gambar"];
+        $i++;
+    }
+}
+// while($row=mysqli_fetch_array($res)){
+//     $array_name[$i]=$row["nama"];
+//     $array_desc[$i]=json_decode($row["description"]);
+//     $array_gambar[$i]=$row["gambar"];
+//     $i++;
+//   }
 //ganti object ke array
 $array_desc=objectsIntoArray($array_desc);
 $count=count($array_name); 
@@ -63,6 +74,8 @@ $count=count($array_name);
 $_SESSION['type1']=$desc1["type"];
 
 $_SESSION['type2']=$desc2["type"];
+
+$connection->close();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
