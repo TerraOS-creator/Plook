@@ -11,32 +11,40 @@ if(isset($_SESSION['type'])){
 
 if(isset($_POST['submit'])){
     if($_POST['id']=="User"){
-        $query="DELETE FROM users where id=?";
-        $res=$connection->prepare($query);
-        $res->bind_param("i",$_POST['ID']);
-        $res->execute();
-        $res->close();
+        $query="DELETE FROM users where id='{$_POST['ID']}'";
+        $res = mysqli_query($connection,$query);
+        // $query="DELETE FROM users where id=?";
+        // $res=$connection->prepare($query);
+        // $res->bind_param("i",$_POST['ID']);
+        // $res->execute();
+        // $res->close();
     }
     elseif($_POST['id']=="Transportation"){
-        $query="DELETE FROM transportation where id=?";
-        $res=$connection->prepare($query);
-        $res->bind_param("i",$_POST['ID']);
-        $res->execute();
-        $res->close();
+        $query="DELETE FROM transportation where id='{$_POST['ID']}'";
+        $res = mysqli_query($connection,$query);
+        // $query="DELETE FROM transportation where id=?";
+        // $res=$connection->prepare($query);
+        // $res->bind_param("i",$_POST['ID']);
+        // $res->execute();
+        // $res->close();
     }
     elseif($_POST['id']=="Hotel"){
-        $query="DELETE FROM hotels where id=?";
-        $res=$connection->prepare($query);
-        $res->bind_param("i",$_POST['ID']);
-        $res->execute();
-        $res->close();
+        $query="DELETE FROM hotels where id='{$_POST['ID']}'";
+        $res = mysqli_query($connection,$query);
+        // $query="DELETE FROM hotels where id=?";
+        // $res=$connection->prepare($query);
+        // $res->bind_param("i",$_POST['ID']);
+        // $res->execute();
+        // $res->close();
     }
     elseif($_POST['id']=="Atraksi"){
-        $query="DELETE FROM atraksi where id=?";
-        $res=$connection->prepare($query);
-        $res->bind_param("i",$_POST['ID']);
-        $res->execute();
-        $res->close();
+        $query="DELETE FROM atraksi where id='{$_POST['ID']}'";
+        $res = mysqli_query($connection,$query);
+        // $query="DELETE FROM atraksi where id=?";
+        // $res=$connection->prepare($query);
+        // $res->bind_param("i",$_POST['ID']);
+        // $res->execute();
+        // $res->close();
     }
 }
 else{

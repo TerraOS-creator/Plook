@@ -36,14 +36,22 @@ if(isset($_GET['error_upload'])){
 }
 require_once('Controller/connection.php');
 require_once('support/ObjectIntoArr.php');
-
+// $csrf_token=$_GET['token'];
+// if($csrf_token==$_SESSION['csrf-token']){
+// }
+// else{
+//     header('Location:Controller/csrf.php');
+// }
 $user_id=$_SESSION['user_id'];
 $query="SELECT * FROM users where id='$user_id'";
 $res = mysqli_query($connection,$query);
+$res=$res->fetch_assoc();
+// $query='SELECT * FROM users where id=?';
+// $stmt=$connection->prepare($query);
 // $stmt->bind_param("i",$user_id);
 // $stmt->execute();
-// $res=$result->get_result();
-$res=$res->fetch_assoc();
+// $res=$stmt->get_result();
+// $res=$res->fetch_assoc();
 ?>
 
 <!DOCTYPE html>
@@ -143,16 +151,17 @@ $res=$res->fetch_assoc();
         <i class="fa fa-history"></i> History of Purchases
       </h3>
       <?php
-
       $query="SELECT * FROM history where id='$user_id'";
+      $history=mysqli_query($connection,$query);
+      // $query='SELECT * FROM history where id=?';
       // $stmt=$connection->prepare($query);
       // $stmt->bind_param("i",$user_id);
       // $stmt->execute();
       // $history=$stmt->get_result();
-      $history=mysqli_query($connection,$query);
       $array=$history->fetch_assoc();
       $con=count((array)$array);
       if($con){
+      // if(count($array)){
       $history=json_decode($array['user_history']);
       $count=count($history);
       $a=0;
