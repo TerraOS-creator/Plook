@@ -50,14 +50,12 @@ $temp=json_encode($array_provinces);
   margin:0;
   text-align:center;
 }
-.photobar a .text{
-  text-align:center;
+.text{
+  margin: auto;
 
 }
-.photobar a{
+a{
   text-decoration:none;
-  margin-left:0.5%;
-  margin-right:0.5%;
 }
 .footer{
   margin-top: 10%;

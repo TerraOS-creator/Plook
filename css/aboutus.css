@@ -56,7 +56,7 @@ header{
     line-height: 30px;
 }
 .about-pages div:nth-child(1){
-    background-color: rgb(30, 168, 26);
+    background-color: rgb(255, 0, 0);
 }
 .about-pages div:nth-child(2){
     background-color: rgb(129,42,110);
