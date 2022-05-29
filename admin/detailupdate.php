@@ -22,10 +22,8 @@ if(isset($_POST['submit'])){
         $capacity=$_POST['capacity'];
         $nama=$_POST['nama'];
         $kosong="";
-
         $query="INSERT INTO transportation values('$nama','$supir','$BBM','$harga','$waktu','$capacity','$gambar','$kosong')";
         $res = mysqli_query($connection,$query);
-
         // $query="INSERT INTO transportation values(?,?,?,?,?,?,?,?)";
         // $res=$connection->prepare($query);
         // $res->bind_param("sssiiisi",$nama,$supir,$BBM,$harga,$waktu,$capacity,$gambar,$kosong);
@@ -91,7 +89,6 @@ if(isset($_POST['submit'])){
         );
         $complete=json_encode($payload);
         $kosong="";
-
         $query="UPDATE hotels SET nama='$nama',description='$complete',gambar='$gambar',text='$hotel_detail' where id='$search'";
         $res = mysqli_query($connection,$query);
 
@@ -202,13 +199,13 @@ elseif($id=="Hotel"){
 ?>
 <h1>Hotel Name</h1>
 <?php
-if(isset($_POST['id'])){
-    $ide=$_POST['id'];
+if(isset($_POST['ID'])){
+    $ID=$_POST['ID'];
 }
 else{
-    $ide=$search;
+    $ID=$search;
 }
-$query="SELECT * FROM hotels where id='$ide'";
+$query="SELECT * FROM hotels where id='$ID'";
 $result=mysqli_query($connection,$query);
 $rowcount = mysqli_num_rows($result);
 echo "<table class='table table-bordered table-striped table-hover'>
@@ -219,7 +216,7 @@ echo "<table class='table table-bordered table-striped table-hover'>
       </tr>
       </thead>";
       
-$row=mysqli_fetch_row($result)
+  $row=$result->fetch_row();
    $temp=json_decode($row[1]);
    $temp=objectsIntoArray($temp);
    $nama=$temp["nama"];
@@ -257,7 +254,7 @@ echo " </tbody></table>";
 <div class="btn btn-primary btn-sm float-left">
 <input type="text" name="nama" value="<?php echo $row[0];?>" placeholder="name" style="color:black" required>
 <input type="text" name="gambar" value="<?php echo $row[2];?>" placeholder="gambar(ex:hotel.jpg)" style="color:black" required>
-<input type="hidden" name="search" value="<?php echo $_POST['id'];?>">
+<input type="hidden" name="search" value="<?php echo $_POST['ID'];?>">
 </div>
 <br>
 <br>
@@ -404,16 +401,16 @@ elseif($id=="Transportation"){
     ?>
     <h1>Transportation</h1>
     <?php
-    if(isset($_POST['id'])){
-        $ide=$_POST['id'];
+    if(isset($_POST['ID'])){
+        $ID=$_POST['ID'];
     }
     else{
-        $ide=$search;
+        $ID=$search;
     }
-    $query="SELECT * FROM transportation where id='$ide'";
+    $query="SELECT * FROM transportation where id='$ID'";
     $result=mysqli_query($connection,$query);
     $rowcount = mysqli_num_rows($result);
-    $row=mysqli_fetch_row($result)
+    $row=$result->fetch_row();
     echo "<table class='table table-bordered table-striped table-hover'>
           <thead>
           <tr>
@@ -510,13 +507,13 @@ elseif($id=="Atraksi"){
     ?>
     <h1>Atraksi</h1>
     <?php
-    if(isset($_POST['id'])){
-        $ide=$_POST['id'];
+    if(isset($_POST['ID'])){
+        $ID=$_POST['ID'];
     }
     else{
-        $ide=$search;
+        $ID=$search;
     }
-    $query="SELECT * FROM atraksi where id='$ide'";
+    $query="SELECT * FROM atraksi where id='$ID'";
     $result=mysqli_query($connection,$query);
     $rowcount = mysqli_num_rows($result);
     echo "<table class='table table-bordered table-striped table-hover'>
@@ -526,7 +523,7 @@ elseif($id=="Atraksi"){
             <th>Name</th>   
           </tr>
           </thead>";
-    $row=mysqli_fetch_row($result);
+    $row=$result->fetch_row();
     
           echo "<tbody><tr>";
           echo "<td>" . $row[3] . "</td>";
