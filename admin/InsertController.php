@@ -21,11 +21,22 @@ if(isset($_POST['submit'])){
         $capacity=$_POST['capacity'];
         $nama=$_POST['nama'];
         $kosong="";
-        $query="INSERT INTO transportation values(?,?,?,?,?,?,?,?)";
-        $res=$connection->prepare($query);
-        $res->bind_param("sssiiisi",$nama,$supir,$BBM,$harga,$waktu,$capacity,$gambar,$kosong);
-        $res->execute();
-        $res->close();
+        $query="INSERT INTO transportation values('$nama','$supir','$BBM','$harga','$waktu','$capacity','$gambar','$kosong')";
+        $res = mysqli_query($connection,$query);
+
+        // $gambar=$_POST['gambar'];
+        // $supir=$_POST['supir'];
+        // $BBM=$_POST['BBM'];
+        // $harga=$_POST['harga'];
+        // $waktu=$_POST['waktu'];
+        // $capacity=$_POST['capacity'];
+        // $nama=$_POST['nama'];
+        // $kosong="";
+        // $query="INSERT INTO transportation values(?,?,?,?,?,?,?,?)";
+        // $res=$connection->prepare($query);
+        // $res->bind_param("sssiiisi",$nama,$supir,$BBM,$harga,$waktu,$capacity,$gambar,$kosong);
+        // $res->execute();
+        // $res->close();
     }
     elseif($_POST['id']=="Hotel"){
       
@@ -86,23 +97,35 @@ if(isset($_POST['submit'])){
         );
         $complete=json_encode($payload);
         $kosong="";
-        $query="INSERT INTO hotels values(?,?,?,?,?)";
-        $res=$connection->prepare($query);
-        $res->bind_param("sssis",$nama,$complete,$gambar,$kosong,$hotel_detail);
-        $res->execute();
-        $res->close();
+        $query="INSERT INTO hotels values('$nama','$complete','$gambar','$kosong','$hotel_detail')";
+        $res = mysqli_query($connection,$query);
+
+        // $query="INSERT INTO hotels values(?,?,?,?,?)";
+        // $res=$connection->prepare($query);
+        // $res->bind_param("sssis",$nama,$complete,$gambar,$kosong,$hotel_detail);
+        // $res->execute();
+        // $res->close();
     }
     elseif($_POST['id']=="Atraksi"){
-        $query="INSERT into atraksi values(?,?,?,?,?)";
         $kosong="";
         $nama=$_POST['nama'];
         $detail=$_POST['atraksi_detail'];
         $gambar=$_POST['gambar'];
         $harga=$_POST['harga'];
-        $res=$connection->prepare($query);
-        $res->bind_param("sisis",$nama,$harga,$gambar,$kosong,$detail);
-        $res->execute();
-        $res->close();
+        $query="INSERT into atraksi values('$nama','$harga','$gambar','$kosong','$detail')";
+
+        $res = mysqli_query($connection,$query);
+
+        // $query="INSERT into atraksi values(?,?,?,?,?)";
+        // $kosong="";
+        // $nama=$_POST['nama'];
+        // $detail=$_POST['atraksi_detail'];
+        // $gambar=$_POST['gambar'];
+        // $harga=$_POST['harga'];
+        // $res=$connection->prepare($query);
+        // $res->bind_param("sisis",$nama,$harga,$gambar,$kosong,$detail);
+        // $res->execute();
+        // $res->close();
     }
 }
 else{

@@ -509,12 +509,15 @@ else{
                $result[]=$array;
                
                $list=json_encode($result);
-                $query="UPDATE history SET user_history=? where id=?";
-                $stmt=$connection->prepare($query);
-                $stmt->bind_param("si",$list,$id);
-                $stmt->execute();
+               $query="UPDATE history SET user_history='$list' where id='$id'";
+               $res = mysqli_query($connection,$query);
+
+                // $query="UPDATE history SET user_history=? where id=?";
+                // $stmt=$connection->prepare($query);
+                // $stmt->bind_param("si",$list,$id);
+                // $stmt->execute();
          
-                $stmt->close();
+                // $stmt->close();
                $number++;
             }
             if($item2!=""){
@@ -538,12 +541,15 @@ else{
                $result[]=$array;
                
                $list=json_encode($result);
-                $query="UPDATE history SET user_history=? where id=?";
-                $stmt=$connection->prepare($query);
-                $stmt->bind_param("si",$list,$id);
-                $stmt->execute();
+               $query="UPDATE history SET user_history='$list' where id='$id'";
+               $res = mysqli_query($connection,$query);
+
+                // $query="UPDATE history SET user_history=? where id=?";
+                // $stmt=$connection->prepare($query);
+                // $stmt->bind_param("si",$list,$id);
+                // $stmt->execute();
                 
-                $stmt->close();
+                // $stmt->close();
             }
         }
        else if($_POST['payment_type']=="flightoneway"){
@@ -566,12 +572,15 @@ else{
                $result[]=$array;
                
                $list=json_encode($result);
-                $query="UPDATE history SET user_history=? where id=?";
-                $stmt=$connection->prepare($query);
-                $stmt->bind_param("si",$list,$id);
-                $stmt->execute();
+               $query="UPDATE history SET user_history='$list' where id='$id'";
+               $res = mysqli_query($connection,$query);
+
+                // $query="UPDATE history SET user_history=? where id=?";
+                // $stmt=$connection->prepare($query);
+                // $stmt->bind_param("si",$list,$id);
+                // $stmt->execute();
             
-                $stmt->close();
+                // $stmt->close();
                $number++;
          
         }
@@ -593,12 +602,15 @@ else{
                $result[]=$array;
                
                $list=json_encode($result);
-                $query="UPDATE history SET user_history=? where id=?";
-                $stmt=$connection->prepare($query);
-                $stmt->bind_param("si",$list,$id);
-                $stmt->execute();
+               $query="UPDATE history SET user_history='$list' where id='$id'";
+               $res = mysqli_query($connection,$query);
+
+                // $query="UPDATE history SET user_history=? where id=?";
+                // $stmt=$connection->prepare($query);
+                // $stmt->bind_param("si",$list,$id);
+                // $stmt->execute();
            
-                $stmt->close();
+                // $stmt->close();
                $number++;
         }
         else if($_POST['payment_type']=="transportation"){
@@ -619,12 +631,15 @@ else{
            $result[]=$array;
            
            $list=json_encode($result);
-            $query="UPDATE history SET user_history=? where id=?";
-            $stmt=$connection->prepare($query);
-            $stmt->bind_param("si",$list,$id);
-            $stmt->execute();
+           $query="UPDATE history SET user_history='$list' where id='$id'";
+           $res = mysqli_query($connection,$query);
+
+            // $query="UPDATE history SET user_history=? where id=?";
+            // $stmt=$connection->prepare($query);
+            // $stmt->bind_param("si",$list,$id);
+            // $stmt->execute();
           
-            $stmt->close();
+            // $stmt->close();
            $number++;
     }
     else if($_POST['payment_type']=="atraksi"){
@@ -645,12 +660,15 @@ else{
        $result[]=$array;
        
        $list=json_encode($result);
-        $query="UPDATE history SET user_history=? where id=?";
-        $stmt=$connection->prepare($query);
-        $stmt->bind_param("si",$list,$id);
-        $stmt->execute();
+       $query="UPDATE history SET user_history='$list' where id='$id'";
+       $res = mysqli_query($connection,$query);
+
+        // $query="UPDATE history SET user_history=? where id=?";
+        // $stmt=$connection->prepare($query);
+        // $stmt->bind_param("si",$list,$id);
+        // $stmt->execute();
    
-        $stmt->close();
+        // $stmt->close();
        $number++;
     }
     }
@@ -785,12 +803,16 @@ else{
     
     }
     $list=json_encode($result);
-    $query="INSERT INTO history values(?,?)";
-    $stmt=$connection->prepare($query);
-    $stmt->bind_param("si",$list,$id);
-    $stmt->execute();
+    $query="INSERT INTO history values('$list','$id')";
+    $res = mysqli_query($connection,$query);
     echo "success1";
-    $stmt->close();
+
+    // $query="INSERT INTO history values(?,?)";
+    // $stmt=$connection->prepare($query);
+    // $stmt->bind_param("si",$list,$id);
+    // $stmt->execute();
+    // echo "success1";
+    // $stmt->close();
     $number++;
     }
     
