@@ -22,13 +22,15 @@ if(isset($_POST['submit'])){
         $capacity=$_POST['capacity'];
         $nama=$_POST['nama'];
         $kosong="";
-        $query="INSERT INTO transportation values('$nama','$supir','$BBM','$harga','$waktu','$capacity','$gambar','$kosong')";
+        $search=$_POST['search'];
+        $query="UPDATE transportation SET nama='$nama',supir='$supir',BBM='$BBM',harga='$harga',waktu='$waktu',kapasitas='$capacity',image='$gambar' where id='$search')";
         $res = mysqli_query($connection,$query);
         // $query="INSERT INTO transportation values(?,?,?,?,?,?,?,?)";
         // $res=$connection->prepare($query);
         // $res->bind_param("sssiiisi",$nama,$supir,$BBM,$harga,$waktu,$capacity,$gambar,$kosong);
         // $res->execute();
         // $res->close();
+        header('Location: Update.php');
     }
     elseif($_POST['id']=="Hotel"){
       
@@ -106,7 +108,8 @@ if(isset($_POST['submit'])){
         $detail=$_POST['atraksi_detail'];
         $gambar=$_POST['gambar'];
         $harga=$_POST['harga'];
-        $query="INSERT into atraksi values('$nama','$harga','$gambar','$kosong','$detail')";
+        $search=$_POST['search'];
+        $query="UPDATE atraksi SET nama='$nama',harga='$harga',image='$gambar',description='$detail' where id='$search'";
         $res = mysqli_query($connection,$query);
 
         // $query="INSERT into atraksi values(?,?,?,?,?)";
@@ -119,6 +122,7 @@ if(isset($_POST['submit'])){
         // $res->bind_param("sisis",$nama,$harga,$gambar,$kosong,$detail);
         // $res->execute();
         // $res->close();
+        header('Location: Update.php');
     }
 }
 else{
@@ -199,28 +203,28 @@ elseif($id=="Hotel"){
 ?>
 <h1>Hotel Name</h1>
 <?php
-if(isset($_POST['ID'])){
-    $ID=$_POST['ID'];
-}
-else{
-    $ID=$search;
-}
-$query="SELECT * FROM hotels where id='$ID'";
-$result=mysqli_query($connection,$query);
-$rowcount = mysqli_num_rows($result);
-echo "<table class='table table-bordered table-striped table-hover'>
-      <thead>
-      <tr>
-      <th>ID</th>
-        <th>Name</th>   
-      </tr>
-      </thead>";
+    if(isset($_POST['ID'])){
+        $ID=$_POST['ID'];
+    }
+    else{
+        $ID=$search;
+    }
+    $query="SELECT * FROM hotels where id='$ID'";
+    $result=mysqli_query($connection,$query);
+    $rowcount = mysqli_num_rows($result);
+    echo "<table class='table table-bordered table-striped table-hover'>
+        <thead>
+        <tr>
+        <th>ID</th>
+            <th>Name</th>   
+        </tr>
+        </thead>";
       
-  $row=$result->fetch_row();
-   $temp=json_decode($row[1]);
-   $temp=objectsIntoArray($temp);
-   $nama=$temp["nama"];
-   $desc1=$temp["description1"];
+    $row=$result->fetch_row();
+    $temp=json_decode($row[1]);
+    $temp=objectsIntoArray($temp);
+    $nama=$temp["nama"];
+    $desc1=$temp["description1"];
     $desc2=$temp["description2"];
     $type1=$desc1["type"];
     $type2=$desc2["type"];
@@ -245,8 +249,8 @@ echo "<table class='table table-bordered table-striped table-hover'>
       echo "<td>" . $row[0] . "</td>";
       echo "</tr>";
 
-$result->free_result();
-echo " </tbody></table>";
+    $result->free_result();
+    echo " </tbody></table>";
 ?>
 <div class="input-form">
 <form method="post">
@@ -426,7 +430,7 @@ elseif($id=="Transportation"){
     $waktu=$row[4];
     $kapasitas=$row[5];
     $image=$row[6];
-    $search=$row[7];
+    $id=$row[7];
     // print($nama);
     // print($supir);
     // print($BBM);
@@ -460,8 +464,9 @@ elseif($id=="Transportation"){
     ?>
     <div class="input-form">
     <form method="post">
-    <h1>Insert:</h1>
+    <h1>Update Transportasi:</h1>
     <?php echo "<td>";?>
+    <input type="hidden" name="search" value="<?php echo $_POST['ID'];?>">
     <input type="hidden" name="id" value="Transportation" style="color:black" required>
     <input type="text" name="nama" placeholder="nama" style="color:black" value="<?php echo $nama; ?>" required>
     <?php echo "</td>";?>
@@ -546,13 +551,13 @@ elseif($id=="Atraksi"){
     <form method="post">
     <h1>Update Atraksi:</h1>
   <?php echo "<td>";?>
+    <input type="hidden" name="search" value="<?php echo $_POST['ID'];?>">
     <input type="text" name="nama" value="<?php echo $row[0];?>" placeholder="nama lokasi" style="color:black" required>
     <?php echo "</td>";?>
     <?php echo "<td>";?>
     <input type="text" name="gambar" value="<?php echo $row[2];?>" placeholder="file gambar(ex: bali.jpg)" style="color:black" required>
     <?php echo "</td>";?>
 
-    
     <input type="hidden" name="id" value="Atraksi">
     <?php echo "<td>";?>
     <input type="number" name="harga" placeholder="harga tiket" value="<?php echo $row[1];?>" style="color:black" required>

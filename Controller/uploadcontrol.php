@@ -38,11 +38,12 @@ if (file_exists($target_file)) {
 
     $new_image_name = 'image_' . date('Y-m-d-H-i-s') . '_' . uniqid() . '.jpg';
     
-
-    $query='UPDATE users SET image=? where id=?';
-    $stmt=$connection->prepare($query);
-    $stmt->bind_param("si",$new_image_name,$_SESSION['user_id']);
-    $stmt->execute();
+    $query="UPDATE users SET image='$new_image_name' where id='{$_SESSION['user_id']}'";
+    $res = mysqli_query($connection,$query);
+    // $query='UPDATE users SET image=? where id=?';
+    // $stmt=$connection->prepare($query);
+    // $stmt->bind_param("si",$new_image_name,$_SESSION['user_id']);
+    // $stmt->execute();
     move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "$target_dir".$new_image_name);
     header('Location:complete.php?complete='."changing ur avatar");
 }

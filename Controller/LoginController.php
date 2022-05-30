@@ -7,14 +7,18 @@ function test_input($data) {
     $data = htmlspecialchars($data);
     return $data;
  }
-$email=test_input($_POST['email']);
+// $email=test_input($_POST['email']);
+$email=($_POST['email']);
 $password=hash('sha256',$_POST['password']);
-$query='SELECT * FROM users where email=?';
-$stmt=$connection->prepare($query);
-$stmt->bind_param("s",$email);
-$stmt->execute();
-$res=$stmt->get_result();
+$query="SELECT * FROM users where email='$email'";
+$res = mysqli_query($connection,$query);
 $res=$res->fetch_assoc();
+// $query='SELECT * FROM users where email=?';
+// $stmt=$connection->prepare($query);
+// $stmt->bind_param("s",$email);
+// $stmt->execute();
+// $res=$stmt->get_result();
+// $res=$res->fetch_assoc();
 //checking prev session
 // $session=session_id();
 // echo $session;

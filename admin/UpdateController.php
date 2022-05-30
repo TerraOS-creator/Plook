@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
         $capacity=$_POST['capacity'];
         $nama=$_POST['nama'];
         $kosong="";
-        $query="INSERT INTO transportation values('$nama','$supir','$BBM','$harga','$waktu','$capacity','$gambar','$kosong')";
+        $query="UPDATE transportation SET nama='$nama',supir='$supir',BBM='$BBM',harga='$harga',waktu='$waktu',kapasitas='$capacity',image='$gambar' where id='$id'";
         $res = mysqli_query($connection,$query);
         // $query="INSERT INTO transportation values(?,?,?,?,?,?,?,?)";
         // $res=$connection->prepare($query);
@@ -89,7 +89,7 @@ if(isset($_POST['submit'])){
         );
         $complete=json_encode($payload);
         $kosong="";
-        $query="UPDATE hotels SET nama='$nama',[description]='$complete',gambar='$gambar',[text]='$hotel_detail' where id='$id'";
+        $query="UPDATE hotels SET nama='$nama',description='$complete',gambar='$gambar',text='$hotel_detail' where id='$id'";
         $res = mysqli_query($connection,$query);
         
         // $query="UPDATE hotels SET nama=?,[description]=?,gambar=?,[text]=? where id=?";
@@ -105,7 +105,7 @@ if(isset($_POST['submit'])){
         $detail=$_POST['atraksi_detail'];
         $gambar=$_POST['gambar'];
         $harga=$_POST['harga'];
-        $query="UPDATE atraksi SET nama='$nama',harga='$harga',[image]='$gambar',id='$kosong',[description]='$detail' where id='$id'";
+        $query="UPDATE atraksi SET nama='$nama',harga='$harga',image='$gambar',description='$detail' where id='$id'";
         $res = mysqli_query($connection,$query);
 
         // $query="INSERT into atraksi values(?,?,?,?,?)";

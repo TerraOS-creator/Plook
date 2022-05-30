@@ -69,7 +69,7 @@ if(!empty($_GET['complete'])){
         var elem=document.getElementById("count");
         var width=0;
         
-        var id=setInterval(frame,50);
+        var id=setInterval(frame,20);
         function frame(){
             if(width>=100){
                 clearInterval(id);
