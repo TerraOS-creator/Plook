@@ -9,10 +9,11 @@ function test_input($data) {
  }
 // $email=test_input($_POST['email']);
 $email=($_POST['email']);
+$password=$_POST['password'];
 $password=hash('sha256',$_POST['password']);
-$query="SELECT * FROM users where email='$email'";
+$query="SELECT * FROM users where email='$email' AND password='$password'";
 $res = mysqli_query($connection,$query);
-$res=$res->fetch_assoc();
+// $res=$res->fetch_assoc();
 // $query='SELECT * FROM users where email=?';
 // $stmt=$connection->prepare($query);
 // $stmt->bind_param("s",$email);
@@ -22,7 +23,10 @@ $res=$res->fetch_assoc();
 //checking prev session
 // $session=session_id();
 // echo $session;
-if($password==$res['password']){
+if(mysqli_num_rows($res)==0){
+  die("Username or password is wrong!");
+}else{
+// if($password==$res['password']){
 //verify login
 session_regenerate_id();
 //checking new session
@@ -34,6 +38,7 @@ $csrf=uniqid();
 $_SESSION['csrf-token']=$key;
 $_SESSION['csrf-token'].=$csrf;
 $_SESSION['user']=$email;
+$res=$res->fetch_assoc();
 $_SESSION['user_id']=$res['id'];
 $type=$res['type'];
 if($type=="admin"){
@@ -44,11 +49,11 @@ else{
     $_SESSION['type']=2;
   header('Location:../index.php');  
 }
+}
+// }
+// else{
+// //deny
+// header('Location:../Login.php?id='."login-failed" );
+// }
 
-}
-else{
-//deny
-header('Location:../Login.php?id='."login-failed" );
-}
-$stmt->close();
 
