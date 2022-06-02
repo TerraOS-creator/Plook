@@ -99,7 +99,7 @@ if(!isset($_SESSION['user'])){
        <script type="text/javascript">
        showDialog();
           function dlgLoginpage(){            
-                window.open('login.php','_blank');
+                window.open('Login.php','_blank');
             }
             
             function showDialog(){
