@@ -78,11 +78,11 @@ if(isset($_SESSION['type'])){
                <h2>QUICK LINKS</h2>
                <div class="border"></div>
                 <ul class="footer-ul">
-                <a class="footer-a" href="index.php"><li class="footer-li">HOME</li></a>
-                <a class="footer-a" href="parallax.php"><li class="footer-li">ABOUT US</li></a>
-                <a class="footer-a" href="review/contactus.php"><li class="footer-li">CONTACT US</li></a>
+                <a class="footer-a" href="../index.php"><li class="footer-li">HOME</li></a>
+                <a class="footer-a" href="../parallax.php"><li class="footer-li">ABOUT US</li></a>
+                <a class="footer-a" href="../review/contactus.php"><li class="footer-li">CONTACT US</li></a>
                 <?php if(isset($_SESSION['user'])) { ?>
-                <a class="footer-a" href="promo.php"><li class="footer-li">PROMO</li></a>
+                <a class="footer-a" href="../promo.php"><li class="footer-li">PROMO</li></a>
                 <?php } ?>
                 
                 </ul>
@@ -92,9 +92,9 @@ if(isset($_SESSION['type'])){
                <h2>Term Of Use</h2>
                <div class="border"></div>
                 <ul class="footer-ul">
-                <a class="footer-a" href="termandcond.php"><li class="footer-li">Term and Conditions</li></a>
-                <a class="footer-a" href="privacypolicy.php"><li class="footer-li">Privacy Policy</li></a>
-                <a class="footer-a" href="cookiepolicy.php"><li class="footer-li">Cookie Policy</li></a>
+                <a class="footer-a" href="../termandcond.php"><li class="footer-li">Term and Conditions</li></a>
+                <a class="footer-a" href="../privacypolicy.php"><li class="footer-li">Privacy Policy</li></a>
+                <a class="footer-a" href="../cookiepolicy.php"><li class="footer-li">Cookie Policy</li></a>
                 
                 
                 </ul>
