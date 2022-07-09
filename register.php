@@ -107,8 +107,10 @@ if($res!=NULL){
         $type="Reguler";
         $temp="";
         $date=date("Y-m-d");
-        $hash=hash('sha256',$password);
-        $query="INSERT INTO users values('$temp','$hash','$email','$phone','$type','$date','$temp','$name')";
+        //$hash=hash('sha256',$password);
+        $pass=$password;
+        //$query="INSERT INTO users values('$temp','$hash','$email','$phone','$type','$date','$temp','$name')";
+        $query="INSERT INTO users values('$temp','$pass','$email','$phone','$type','$date','$temp','$name')";
         $res = mysqli_query($connection,$query);
         // $query="INSERT INTO users values(?,?,?,?,?,?,?,?)";
         // $stmt=$connection->prepare($query);
@@ -121,7 +123,7 @@ if($res!=NULL){
         $password='';
         $conf_password='';
         $phone='';
-        header('Location:login.php');
+        header('Location:Login.php');
  }
 }
 
