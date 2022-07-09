@@ -4,7 +4,7 @@ session_regenerate_id();
 // using \ for directory in windows
 // $target_dir = "D:\\xampp\\htdocs\\MAKING\\uploads\\";
 // $target_dir=getcwd();
-$target_dir.="/var/www/html/Plook/uploads/";
+$target_dir="/var/www/html/Plook/uploads/";
 
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $avatarfile=basename($_FILES["fileToUpload"]["name"]);
