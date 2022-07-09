@@ -2,9 +2,9 @@
 require_once('connection.php');
 session_regenerate_id();
 // using \ for directory in windows
-$target_dir = "D:\\xampp\\htdocs\\MAKING\\uploads\\";
-$target_dir=getcwd();
-$target_dir.="\\..\\uploads\\";
+// $target_dir = "D:\\xampp\\htdocs\\MAKING\\uploads\\";
+// $target_dir=getcwd();
+$target_dir.="/var/www/html/Plook/uploads/";
 
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $avatarfile=basename($_FILES["fileToUpload"]["name"]);
@@ -50,7 +50,7 @@ if (file_exists($target_file)) {
 else{
     
         if ($uploadOk == 0) {
-            header('Location:..\profile.php?error_upload='.$temp);
+            header('Location:../profile.php?error_upload='.$temp);
             
         // if everything is ok, try to upload file
         } else {
