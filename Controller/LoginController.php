@@ -10,7 +10,6 @@ function test_input($data) {
 // $email=test_input($_POST['email']);
 $email=($_POST['email']);
 $password=$_POST['password'];
-$password=hash('sha256',$_POST['password']);
 $query="SELECT * FROM users where email='$email' AND password='$password'";
 $res = mysqli_query($connection,$query);
 // $res=$res->fetch_assoc();
